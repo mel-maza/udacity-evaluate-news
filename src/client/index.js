@@ -1,6 +1,6 @@
 import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
-import img from '../assets/icons/9685812131574055269-128.png'
+import img from '../icons/9685812131574055269-128.png'
 
 import './styles/resets.scss'
 import './styles/base.scss'

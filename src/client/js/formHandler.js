@@ -33,13 +33,14 @@ function handleSubmit(event) {
         .then(res => {return res.json()})
         .then(function(res) {
             if (res.response) {
-                resultElement.innerHTML = res.response.text;
+                resultElement.innerHTML = `${Client.resultsTemplate(res.response)}`;
             } else {
                 document.getElementById('errormessage').innerHTML = res.error;
                 errorElement.style.display = "block";
             }
             
         })
+        
     }
 
 }

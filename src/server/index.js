@@ -33,7 +33,10 @@ app.listen(8081, function () {
 
 app.post('/api', function (req, res) {
     console.log('post-call: ', req.body.text);
-    textapi.sentiment({ 'text': req.body.text}, function(error, response) {
+    textapi.sentiment({
+         text: req.body.text,
+         mode: 'document'
+        }, function(error, response) {
         console.log('error:', error);
         console.log('response:', response);
         if (error === null) {

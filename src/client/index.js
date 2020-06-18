@@ -1,4 +1,4 @@
-import { checkForName } from './js/nameChecker'
+import { isValidURL } from './js/urlValidator'
 import { handleSubmit } from './js/formHandler'
 import img from '../icons/9685812131574055269-128.png'
 
@@ -18,6 +18,6 @@ myLogo.src = img;
 logoElement.appendChild(myLogo);
 
 export {
-    checkForName,
+    isValidURL,
     handleSubmit
 }

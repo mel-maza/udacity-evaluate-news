@@ -1,4 +1,4 @@
-const { isValidURL } = require('./formHandler');
+const { isValidURL } = require('./urlValidator');
 
 describe('isValidURL...', () => {
     it('should return true', () => {

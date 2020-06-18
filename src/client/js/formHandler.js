@@ -3,7 +3,6 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let formText = document.getElementById('name').value
-    Client.checkForName(formText)
 
     // Get the error element and hide it 
     const errorElement = document.getElementById('error');
@@ -14,7 +13,7 @@ function handleSubmit(event) {
     resultElement.innerHTML = '';
 
     // check if input is valid url
-    if (!isValidURL(formText)) {
+    if (!Client.isValidURL(formText)) {
         document.getElementById('errormessage').innerHTML = "Your input is not a valid URL.";
         errorElement.style.display = "block";
     } else {
@@ -45,12 +44,4 @@ function handleSubmit(event) {
 
 }
 
-const isValidURL = (formText) => {
-    const result = formText.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-    if(result == null)
-        return false;
-    else
-        return true;
-  };
-
-export { handleSubmit, isValidURL }
+export { handleSubmit }
